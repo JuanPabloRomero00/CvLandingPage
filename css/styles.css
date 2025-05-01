@@ -175,3 +175,64 @@ body, h1, h2, h3, p, ul {
 .fade-in.visible {
   opacity: 1;
 }
+
+.social-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* GitHub */
+.social-links a[href*="github"] {
+  background-color: #f0f0f0;
+}
+.social-links a[href*="github"]:hover {
+  background-color: #333; /* GitHub dark */
+}
+.social-links a:hover img[alt="GitHub"] {
+  filter: invert(100%);
+}
+
+/* LinkedIn */
+.social-links a[href*="linkedin"] {
+  background-color: #f0f0f0;
+}
+.social-links a[href*="linkedin"]:hover {
+  background-color: #0a66c2; /* LinkedIn blue */
+}
+.social-links a:hover img[alt="LinkedIn"] {
+  filter: invert(100%);
+}
+
+/* WhatsApp */
+.social-links a[href*="wa.me"] {
+  background-color: #f0f0f0;
+}
+.social-links a[href*="wa.me"]:hover {
+  background-color: #25D366; /* WhatsApp green */
+}
+.social-links a:hover img[alt="WhatsApp"] {
+  filter: invert(100%);
+}
+
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease;
+}

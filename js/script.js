@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  
   //scroll to top button
   const scrollTopBtn = document.getElementById("scrollTopBtn");
 

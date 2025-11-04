@@ -4,124 +4,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juan Pablo Romero - CV</title>
+    <title>Juan Pablo Romero - Desarrollador Web Full Stack</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
 
-    <header>
-      <div class="header-container">
-        <div>
-          <h1>Juan Pablo Romero</h1>
-          <p>Técnico de Soporte de IT y Desarrollador de software</p>
-          <br />
+    <header class="hero-section">
+      <div class="hero-background"></div>
+      <div class="parallax-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+      </div>
+      <div class="hero-content">
+        <div class="profile-container">
+          <div class="profile-video">
+            <video 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              poster="images/profile.jpg">
+              <source src="images/profile-video.mp4" type="video/mp4">
+              <source src="images/profile-video.webm" type="video/webm">
+              <img src="images/profile.jpg" alt="Juan Pablo Romero" />
+            </video>
+            <div class="profile-ring"></div>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1 class="hero-name">Juan Pablo Romero</h1>
+          <div class="typing-container">
+            <span id="typing-text" class="typing-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-description">Desarrollador Web Full Stack | Stack MERN | Argentina</p>
         </div>
       </div>
-      <nav>
+      <nav class="hero-nav">
         <a href="#acerca">Acerca de mí</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#experiencia">Experiencia</a>
-        <a href="#educacion">Educación</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
     <main>
+      <div class="geometric-background">
+        <div class="geometric-shape geo-1"></div>
+        <div class="geometric-shape geo-2"></div>
+        <div class="geometric-shape geo-3"></div>
+        <div class="geometric-shape geo-4"></div>
+        <div class="geometric-shape geo-5"></div>
+        <div class="geometric-shape geo-6"></div>
+      </div>
 
-      <section id="acerca" class="fade-in">
+      <section id="acerca" class="slide-in-left">
         <h2>Acerca de mí</h2>
-        <div class="card">
+        <div class="card scale-in">
           <p>
-            Soy una persona proactiva, organizada y responsable, con buenas
-            relaciones interpersonales y excelente capacidad para trabajar en
-            equipo a la hora de resolver problemas. Busco un puesto desafiante
-            que me permita seguir desarrollándome profesionalmente.
+            <strong>Desarrollador Web Full Stack</strong> especializado en el stack MERN (MongoDB, Express, React, Node.js) 
+            con sede en Argentina. Me apasiona construir aplicaciones web dinámicas y escalables que resuelvan 
+            problemas reales, desde landing pages responsivas hasta sistemas de gestión completos.
+          </p>
+          <br>
+          <p>
+            Mi enfoque principal está en JavaScript moderno (ES6+), React para frontend, y Node.js/Express para backend, 
+            con experiencia sólida en bases de datos tanto NoSQL (MongoDB) como relacionales (PostgreSQL). 
+            Siempre estoy aprendiendo y experimentando con nuevas herramientas y tecnologías.
           </p>
         </div>
       </section>
 
-      <section id="experiencia" class="fade-in">
-        <h2>Experiencia Laboral</h2>
+      <section id="tecnologias" class="slide-in-right">
+        <h2>🛠️ Tecnologías</h2>
+        
+        <div class="tech-grid">
+          <div class="tech-category card scale-in">
+            <h3><strong>Frontend</strong></h3>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="tech-category card scale-in">
+            <h3><strong>Backend</strong></h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">APIs REST</span>
+              <span class="tech-tag">Java (básico)</span>
+              <span class="tech-tag">Spring Boot</span>
+            </div>
+          </div>
+
+          <div class="tech-category card scale-in">
+            <h3><strong>Bases de Datos</strong></h3>
+            <div class="tech-tags">
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Mongoose</span>
+            </div>
+          </div>
+
+          <div class="tech-category card scale-in">
+            <h3><strong>Herramientas</strong></h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">VS Code</span>
+              <span class="tech-tag">Insomnia</span>
+              <span class="tech-tag">Netlify</span>
+              <span class="tech-tag">Render</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="slide-in-left">
+        <h2>🔥 Proyectos Destacados</h2>
+        
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            CarwashFreaksV2.0 - Sistema de Gestión de Lavado de Autos
+          </button>
+          <div class="accordion-content">
+            <p><strong>Tecnologías:</strong> JavaScript, Node.js, Express.js, MongoDB</p>
+            <p>Evolución de una app de gestión completa que incluye CRUD, autenticación de usuarios, 
+            dashboard administrativo y sistema de turnos. Backend robusto con APIs REST.</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>■ Sistema de autenticación y autorización</li>
+              <li>■ Dashboard con métricas en tiempo real</li>
+              <li>■ CRUD completo para gestión de servicios</li>
+              <li>■ Deployment en Render</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            PokeProject - App Interactiva con API de Pokémon
+          </button>
+          <div class="accordion-content">
+            <p><strong>Tecnologías:</strong> JavaScript, React, REST API</p>
+            <p>Proyecto divertido e interactivo que consume la API de Pokémon. Incluye búsqueda avanzada, 
+            filtros dinámicos y cards interactivas con animaciones.</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>■ State management con React Hooks</li>
+              <li>■ Consumo de APIs externas con fetch</li>
+              <li>■ Filtros y búsqueda en tiempo real</li>
+              <li>■ Interface responsive y animada</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            SePrise Clinical - Prototipo de App Médica
+          </button>
+          <div class="accordion-content">
+            <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
+            <p>Prototipo para una aplicación clínica con landing page informativa, 
+            formularios de contacto y secciones para servicios médicos.</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>■ Diseño mobile-first responsive</li>
+              <li>■ Formularios validados con JavaScript</li>
+              <li>■ Optimización de performance</li>
+              <li>■ UI/UX enfocado en accesibilidad</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            Portfolio Personal - CV Landing Page
+          </button>
+          <div class="accordion-content">
+            <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
+            <p>Mi portfolio personal: landing page completamente responsiva con animaciones avanzadas, 
+            efectos parallax y microinteracciones. Diseño clean y moderno.</p>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>■ Animaciones CSS avanzadas y parallax</li>
+              <li>■ Diseño responsive y mobile-first</li>
+              <li>■ Efectos hover elaborados</li>
+              <li>■ Deployment en Netlify</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" class="slide-in-right">
+        <h2>💼 Experiencia</h2>
          
-        <div class="accordion">
-          <button class="accordion-btn" href="#">
-            APS Soluciones (Nov 2021 - Presente) - Técnico de Soporte IT
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            Desarrollador Web Full Stack (2023 - Presente) - Proyectos Freelance
           </button>
           <div class="accordion-content">
             <ul>
               <li>
-                ■ Brindé soporte técnico especializado en infraestructura
-                tecnológica, resolviendo problemas complejos y optimizando
-                sistemas.
+                ■ Desarrollo de aplicaciones web completas usando stack MERN (MongoDB, Express, React, Node.js)
               </li>
               <li>
-                ■ Realice mantenimiento correctivo y preventivo de equipos
-                informáticos, aplicando conocimientos en software y hardware.
+                ■ Implementación de sistemas de autenticación, APIs REST y bases de datos escalables
               </li>
               <li>
-                ■ Uso de herramientas web para seguimiento de incidencias y
-                gestión de inventario de repuestos.
+                ■ Deployment y mantenimiento de aplicaciones en plataformas como Netlify y Render
+              </li>
+              <li>
+                ■ Colaboración en proyectos open source y desarrollo de portfolio personal
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="accordion">
-          <button class="accordion-btn" href="#">
-            Mamut Logística (Feb 2021 - Oct 2021) - Encargado de Ruteo
+        <div class="accordion stagger-animation">
+          <button class="accordion-btn">
+            Técnico de Soporte IT (Nov 2021 - Presente) - APS Soluciones
           </button>
           <div class="accordion-content">
             <ul>
               <li>
-                ■ Optimización de rutas de entrega utilizando software de
-                gestión logística.
+                ■ Soporte técnico especializado en infraestructura tecnológica y resolución de problemas complejos
               </li>
               <li>
-                ■ Coordinación con clientes y registro de actividades en
-                Microsoft Excel.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="accordion">
-          <button class="accordion-btn" href="#">
-            Veolia Environnement (Mar 2019 - Nov 2019) - Pasante Técnico
-            Electricista
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>
-                ■ Mantenimiento técnico de equipos de refrigeración y
-                documentación de intervenciones.
+                ■ Mantenimiento de sistemas informáticos y aplicación de conocimientos en software y hardware
               </li>
               <li>
-                ■ Colaboración en mejoras preventivas para aumentar la
-                eficiencia operativa.
+                ■ Uso de herramientas web para seguimiento de incidencias y gestión de inventario
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="educacion" class="fade-in">
-        <h2>Educación</h2>
-        <div class="card">
+      <section id="educacion" class="slide-in-left">
+        <h2>🎓 Formación en Desarrollo</h2>
+        <div class="card scale-in">
           <p>
-            <strong>Instituto de Formación Técnica Profesional N°16</strong
-            ><br />Tecnicatura Superior en Desarrollo de Software
+            <strong>Instituto de Formación Técnica Profesional N°16</strong><br />
+            Tecnicatura Superior en Desarrollo de Software<br />
+            <em>Enfoque en programación web moderna, bases de datos y metodologías ágiles</em>
           </p>
         </div>
-        <div class="card">
+        
+        <div class="card scale-in">
           <p>
-            <strong>Escuela Técnica N°9 Ing. Luis A. Huergo</strong
-            ><br />Técnico Electricista con orientación a Electrónica
+            <strong>Formación Autodidacta</strong><br />
+            Stack MERN, JavaScript ES6+, React Hooks, Node.js, Express, MongoDB<br />
+            <em>Aprendizaje continuo a través de proyectos prácticos y documentación oficial</em>
           </p>
         </div>
       </section>
 
-      <section id="contacto" class="fade-in">
-        <h2>Contacto</h2>
+      <section id="contacto" class="slide-in-right">
+        <h2>📫 Contacto</h2>
         <div class="social-links">
           <a
             href="https://github.com/JuanPabloRomero00"
@@ -155,11 +302,12 @@
           </a>
         </div>
         <div class="card">
-          <p><strong>Teléfono:</strong> 1159750812</p>
           <p><strong>Email:</strong> romerojuanpablo.00@gmail.com</p>
-          <p><strong>Dirección:</strong> Caballito, CABA</p>
+          <p><strong>LinkedIn:</strong> linkedin.com/in/juan-pablo-romero-/</p>
+          <p><strong>Ubicación:</strong> Argentina</p>
+          <p><em>¡Abierto a colaboraciones, PRs y nuevos proyectos! 🚀</em></p>
           <a
-            href="mailto:romerojuanpablo.00@gmail.com?subject=Contacto%20desde%20tu%20CV&body=Hola%20Juan%2C%20te%20escribo%20por%20tu%20currículum%20publicado."
+            href="mailto:romerojuanpablo.00@gmail.com?subject=Oportunidad%20Laboral&body=Hola%20Juan%20Pablo,%20te%20escribo%20por%20tu%20CV%20online."
             class="btn"
             >Enviar Email</a
           >

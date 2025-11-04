@@ -73,17 +73,6 @@ body, h1, h2, h3, p, ul {
   z-index: -2;
 }
 
-/* Parallax Elements */
-.parallax-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -124,22 +113,6 @@ body, h1, h2, h3, p, ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-image {
-  position: relative;
-  width: 280px;
-  height: 310px;
-  margin: 0 auto;
-}
-
-.profile-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .profile-ring {
   position: absolute;
   top: -10px;
@@ -154,14 +127,12 @@ body, h1, h2, h3, p, ul {
   transition: opacity 0.3s ease;
 }
 
-.profile-video:hover video,
-.profile-image:hover img {
+.profile-video:hover video {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.profile-video:hover .profile-ring,
-.profile-image:hover .profile-ring {
+.profile-video:hover .profile-ring {
   opacity: 1;
 }
 
@@ -282,12 +253,6 @@ body, h1, h2, h3, p, ul {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 133, 132, 0.4);
   background: linear-gradient(135deg, #008584, var(--color4));
-}
-
-.tech-category p {
-  color: #666;
-  font-style: italic;
-  margin-top: 10px;
 }
 
 /* ===== SECCIONES PRINCIPALES ===== */
@@ -556,17 +521,6 @@ h2 {
 }
 
 /* ===== ANIMACIONES ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Animaciones específicas por tipo de contenido */
 .slide-in-left {
   opacity: 0;
@@ -722,7 +676,7 @@ footer::before {
     font-size: 1.2rem;
   }
   
-  .profile-image, .profile-video {
+  .profile-video {
     width: 200px;
     height: 230px;
   }
@@ -769,7 +723,7 @@ footer::before {
     font-size: 1.1rem;
   }
   
-  .profile-image, .profile-video {
+  .profile-video {
     width: 180px;
     height: 210px;
   }
@@ -804,7 +758,7 @@ footer::before {
     font-size: 1rem;
   }
   
-  .profile-image, .profile-video {
+  .profile-video {
     width: 160px;
     height: 190px;
   }
@@ -833,7 +787,7 @@ footer::before {
     font-size: 1rem;
   }
   
-  .profile-image, .profile-video {
+  .profile-video {
     width: 180px;
     height: 205px;
   }
@@ -847,10 +801,6 @@ footer::before {
   /* Desactivar animaciones complejas en dispositivos móviles pequeños */
   .card:hover {
     transform: translateY(-4px);
-  }
-  
-  .geometric-background {
-    display: none;
   }
 }
 

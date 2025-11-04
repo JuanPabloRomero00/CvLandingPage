@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 
   // ===== ENHANCED ANIMATION SYSTEM =====
-  const animationElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .stagger-animation');
+  const animationElements = document.querySelectorAll('.slide-in-left, .slide-in-right, .scale-in, .stagger-animation');
   
   const observerOptions = {
     threshold: 0.1,

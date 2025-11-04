@@ -25,6 +25,24 @@ body {
   line-height: 1.6;
 }
 
+/* ===== VIDEO BACKGROUND ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.35; 
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  position: relative;
+  z-index: 1;
+}
+
 body, h1, h2, h3, p, ul {
   text-align: center;
   padding: 15px 5px;
@@ -64,68 +82,6 @@ body, h1, h2, h3, p, ul {
   height: 100%;
   z-index: -1;
   overflow: hidden;
-}
-
-.floating-shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  animation: float 6s ease-in-out infinite;
-}
-
-.shape-1 {
-  width: 80px;
-  height: 80px;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.shape-2 {
-  width: 120px;
-  height: 120px;
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
-  border-radius: 20px;
-}
-
-.shape-3 {
-  width: 60px;
-  height: 60px;
-  bottom: 30%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-.shape-4 {
-  width: 100px;
-  height: 100px;
-  top: 40%;
-  right: 40%;
-  animation-delay: 1s;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  border-radius: 0;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.3;
-  }
-  25% {
-    transform: translateY(-20px) rotate(90deg);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-10px) rotate(180deg);
-    opacity: 0.4;
-  }
-  75% {
-    transform: translateY(-30px) rotate(270deg);
-    opacity: 0.7;
-  }
 }
 
 @keyframes gradientShift {
@@ -341,105 +297,6 @@ section {
   margin: auto;
   position: relative;
   z-index: 2;
-}
-
-/* ===== GEOMETRIC BACKGROUND ===== */
-.geometric-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.geometric-shape {
-  position: absolute;
-  opacity: 0.03;
-  animation: geometricFloat 20s ease-in-out infinite;
-}
-
-.geo-1 {
-  width: 100px;
-  height: 100px;
-  background: var(--color3);
-  top: 10%;
-  left: 5%;
-  border-radius: 50%;
-  animation-delay: 0s;
-}
-
-.geo-2 {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid var(--color4);
-  top: 30%;
-  right: 10%;
-  animation-delay: 5s;
-}
-
-.geo-3 {
-  width: 80px;
-  height: 80px;
-  background: var(--color5);
-  top: 60%;
-  left: 15%;
-  transform: rotate(45deg);
-  animation-delay: 10s;
-}
-
-.geo-4 {
-  width: 120px;
-  height: 60px;
-  background: var(--color3);
-  border-radius: 60px;
-  top: 20%;
-  left: 50%;
-  animation-delay: 15s;
-}
-
-.geo-5 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 50px 87px 50px;
-  border-color: transparent transparent var(--color4) transparent;
-  bottom: 20%;
-  right: 20%;
-  animation-delay: 8s;
-}
-
-.geo-6 {
-  width: 90px;
-  height: 90px;
-  background: var(--color5);
-  bottom: 10%;
-  left: 60%;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  animation-delay: 12s;
-}
-
-@keyframes geometricFloat {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.03;
-  }
-  25% {
-    transform: translateY(-30px) rotate(90deg);
-    opacity: 0.06;
-  }
-  50% {
-    transform: translateY(-15px) rotate(180deg);
-    opacity: 0.04;
-  }
-  75% {
-    transform: translateY(-45px) rotate(270deg);
-    opacity: 0.07;
-  }
 }
 
 /* ===== PARTICLE ANIMATION ===== */
@@ -758,11 +615,62 @@ h2 {
 
 /* ===== FOOTER ===== */
 footer {
+  background: linear-gradient(135deg, #004d4d, var(--color3), var(--color4));
+  color: white;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
   text-align: center;
-  padding: 20px;
-  background: var(--color5);
-  color: #444;
-  margin-top: 40px;
+}
+
+.footer-copyright {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ccffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-subtitle {
+  color: #cccccc;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-tech {
+  color: #aaaaaa;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Efecto de ondas en el footer */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent
+  );
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -843,15 +751,6 @@ footer {
   .tech-tag {
     font-size: 0.8rem;
     padding: 5px 10px;
-  }
-  
-  /* Reducir partículas en móvil */
-  .floating-shape {
-    display: none;
-  }
-  
-  .geometric-shape {
-    opacity: 0.02;
   }
 }
 
@@ -966,8 +865,53 @@ footer {
     scroll-behavior: auto !important;
   }
   
-  .floating-shape,
-  .geometric-shape {
-    display: none;
+  #bg-video {
+    display: none; /* Respetar preferencias de accesibilidad */
+  }
+}
+
+/* ===== RESPONSIVE VIDEO BACKGROUND ===== */
+@media (max-width: 768px) {
+  #bg-video {
+    opacity: 0.25; /* Aumentado pero manteniendo proporción para móvil */
+  }
+}
+
+@media (max-width: 480px) {
+  #bg-video {
+    display: none; /* Desactivar en pantallas muy pequeñas para performance */
+  }
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer-copyright {
+    font-size: 1rem;
+  }
+  
+  .footer-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer-copyright {
+    font-size: 0.95rem;
+  }
+  
+  .footer-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .footer-tech {
+    font-size: 0.75rem;
   }
 }

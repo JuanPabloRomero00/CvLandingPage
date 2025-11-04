@@ -9,15 +9,13 @@
   </head>
 
   <body>
+    <!-- Video Background -->
+    <video id="bg-video" autoplay muted loop playsinline>
+      <source src="images/background-video.mp4" type="video/mp4">
+    </video>
 
     <header class="hero-section">
       <div class="hero-background"></div>
-      <div class="parallax-elements">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
-      </div>
       <div class="hero-content">
         <div class="profile-container">
           <div class="profile-video">
@@ -53,15 +51,7 @@
     </header>
 
     <main>
-      <div class="geometric-background">
-        <div class="geometric-shape geo-1"></div>
-        <div class="geometric-shape geo-2"></div>
-        <div class="geometric-shape geo-3"></div>
-        <div class="geometric-shape geo-4"></div>
-        <div class="geometric-shape geo-5"></div>
-        <div class="geometric-shape geo-6"></div>
-      </div>
-
+      
       <section id="acerca" class="slide-in-left">
         <h2>Acerca de mí</h2>
         <div class="card scale-in">
@@ -316,7 +306,11 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Juan Pablo Romero</p>
+      <div class="footer-content">
+        <p class="footer-copyright">&copy; 2025 Juan Pablo Romero</p>
+        <p class="footer-subtitle">Desarrollador Web Full Stack | Argentina</p>
+        <p class="footer-tech">Hecho con HTML, CSS & JavaScript</p>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>

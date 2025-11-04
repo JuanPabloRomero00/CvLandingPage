@@ -1,19 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // ===== PARALLAX SCROLLING =====
-  const parallaxElements = document.querySelectorAll('.floating-shape');
-  
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxSpeed = 0.5;
-    
-    parallaxElements.forEach((element, index) => {
-      const speed = parallaxSpeed * (index + 1) * 0.3;
-      const yPos = -(scrolled * speed);
-      element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+  // ===== VIDEO BACKGROUND =====
+  const bgVideo = document.getElementById('bg-video');
+  if (bgVideo) {
+    bgVideo.addEventListener('error', () => {
+      console.log('Background video failed to load');
+      bgVideo.style.display = 'none';
     });
-  });
-
+  }
+  
   // ===== TYPING ANIMATION =====
   const typingElement = document.getElementById("typing-text");
   const phrases = [

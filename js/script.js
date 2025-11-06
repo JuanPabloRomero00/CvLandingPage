@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     setTimeout(typeWriter, typingSpeed);
   }
-  
   typeWriter();
 
-  // ===== ENHANCED ANIMATION SYSTEM =====
+
+  // ===== ELEMENT ANIMATION SYSTEM =====
   const animationElements = document.querySelectorAll('.slide-in-left, .slide-in-right, .scale-in, .stagger-animation');
   
   const observerOptions = {
@@ -61,13 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Agregar delay escalonado para elementos stagger
         if (entry.target.classList.contains('stagger-animation')) {
           const staggerElements = document.querySelectorAll('.stagger-animation');
           const elementIndex = Array.from(staggerElements).indexOf(entry.target);
           setTimeout(() => {
             entry.target.classList.add('visible');
-          }, elementIndex * 150); // 150ms delay entre elementos
+          }, elementIndex * 150);
         } else {
           entry.target.classList.add('visible');
         }
@@ -78,106 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
   animationElements.forEach((el) => observer.observe(el));
 
-  // ===== SMOOTH SCROLL TRANSITIONS =====
-  const navLinks = document.querySelectorAll('.hero-nav a[href^="#"]');
+
   
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      const targetId = link.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        // Smooth scroll personalizado
-        const headerOffset = 80;
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-        
-        // Highlight temporal de la sección
-        targetSection.style.transform = 'scale(1.02)';
-        targetSection.style.transition = 'transform 0.3s ease';
-        
-        setTimeout(() => {
-          targetSection.style.transform = 'scale(1)';
-        }, 300);
-      }
-    });
-  });
-  
-  // ===== SCROLL PROGRESS INDICATOR =====
-  const createScrollProgressIndicator = () => {
-    const progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    document.body.appendChild(progressBar);
-    
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      progressBar.style.width = scrollPercent + '%';
-    });
-  };
-  
-  createScrollProgressIndicator();
-  
-  // ===== DYNAMIC PARTICLES =====
-  const createParticles = () => {
-    const particleContainer = document.createElement('div');
-    particleContainer.className = 'particle-container';
-    particleContainer.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      overflow: hidden;
-    `;
-    document.body.appendChild(particleContainer);
-    
-    const createParticle = () => {
-      const particle = document.createElement('div');
-      const size = Math.random() * 4 + 2;
-      const animationDuration = Math.random() * 15 + 10;
-      const delay = Math.random() * 5;
-      
-      particle.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: rgba(0, 133, 132, 0.3);
-        border-radius: 50%;
-        left: ${Math.random() * 100}%;
-        animation: particleFloat ${animationDuration}s linear ${delay}s infinite;
-      `;
-      
-      particleContainer.appendChild(particle);
-      
-      // Remover partícula después de la animación
-      setTimeout(() => {
-        if (particle.parentNode) {
-          particle.parentNode.removeChild(particle);
-        }
-      }, (animationDuration + delay) * 1000);
-    };
-    
-    // Crear partículas periódicamente
-    setInterval(createParticle, 3000);
-    
-    // Crear algunas partículas iniciales
-    for (let i = 0; i < 5; i++) {
-      setTimeout(createParticle, i * 600);
-    }
-  };
-  
-  createParticles();
+  // ===== ACCORDION =====
   const accordions = document.querySelectorAll(".accordion");
   accordions.forEach((acc) => {
     const btn = acc.querySelector(".accordion-btn");
@@ -193,11 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
       
       if (!isOpen) {
         acc.classList.add("active");
-        content.style.maxHeight = content.scrollHeight + "px";
+        setTimeout(() => {
+          content.style.maxHeight = content.scrollHeight + 20 + "px";
+        }, 10);
       }
     });
   });
   
+
   // ===== SCROLL TO TOP BUTTON =====
   const scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -214,6 +119,26 @@ document.addEventListener("DOMContentLoaded", () => {
       top: 0,
       behavior: "smooth",
     });
+  });
+
+
+  // ===== EMAIL FUNCTIONALITY =====
+  const emailBtn = document.getElementById("emailBtn");
+  
+  emailBtn.addEventListener("click", () => {
+    const email = "romerojuanpablo.00@gmail.com";
+    const subject = "Oportunidad Laboral";
+    const body = "Hola Juan Pablo, te escribo por tu CV online.";
+    
+    // Intento mailto primero
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
+    // Si mailto no funciona después de 500ms, redirigir a Gmail web
+    setTimeout(() => {
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(gmailUrl, '_blank');
+    }, 500);
   });
 
 });

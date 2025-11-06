@@ -92,7 +92,7 @@ body, h1, h2, h3, p, ul {
 }
 
 
-/* ===== PERFIL VIDEO/IMAGEN ===== */
+/* ===== VIDEO/IMAGEN PROFILE ===== */
 .profile-container {
   position: relative;
 }
@@ -140,7 +140,7 @@ body, h1, h2, h3, p, ul {
 }
 
 
-/* ===== TEXTO HERO ===== */
+/* ===== HERO TEXT ===== */
 .hero-text {
   text-align: center;
 }
@@ -186,7 +186,7 @@ body, h1, h2, h3, p, ul {
 }
 
 
-/* ===== NAVEGACIÓN HERO ===== */
+/* ===== HERO NAV ===== */
 .hero-nav {
   position: absolute;
   bottom: 2rem;
@@ -218,7 +218,7 @@ body, h1, h2, h3, p, ul {
 
 
 
-/* ===== TECNOLOGÍAS SECTION ===== */
+/* ===== TECHNOLOGIES SECTION ===== */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -264,7 +264,7 @@ body, h1, h2, h3, p, ul {
 
 
 
-/* ===== SECCIONES PRINCIPALES ===== */
+/* ===== PRINCIPAL SECTION ===== */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -274,24 +274,6 @@ section {
 }
 
 
-
-/* ===== PARTICLE ANIMATION ===== */
-@keyframes particleFloat {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.5;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-100px) rotate(360deg);
-    opacity: 0;
-  }
-}
 
 h2 {
   color: var(--color3);
@@ -344,7 +326,7 @@ h2 {
 
 
 
-/* ===== ACORDEÓN ===== */
+/* ===== ACCORDION ===== */
 .accordion {
   margin-bottom: 15px;
   text-align: center;
@@ -431,14 +413,24 @@ h2 {
 }
 
 .accordion.active .accordion-content {
-  max-height: 500px;
-  padding: 15px 20px 20px 20px;
+  max-height: 800px;
+  padding: 15px 20px 30px 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* SPECIFIC STYLES FOR ACCORDION BUTTONS */
+.accordion-content .btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.9em;
 }
 
 
 
-/* ===== BOTONES Y ENLACES ===== */
+/* ===== BUTTONS AND LINKS ===== */
 .btn {
   display: inline-block;
   background: var(--color4);
@@ -456,7 +448,7 @@ h2 {
 
 
 
-/* ===== REDES SOCIALES ===== */
+/* ===== SOCIAL LINKS ===== */
 .social-links {
   display: flex;
   gap: 24px;
@@ -502,21 +494,6 @@ h2 {
 }
 
 
-/* ===== SCROLL PROGRESS INDICATOR ===== */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color4), var(--color3));
-  z-index: 9999;
-  transition: width 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 133, 132, 0.5);
-}
-
-
-
 /* ===== SCROLL TOP BUTTON ===== */
 #scrollTopBtn {
   position: fixed;
@@ -542,7 +519,7 @@ h2 {
 
 
 
-/* ===== ANIMACIONES ===== */
+/* ===== ANIMATIONS ===== */
 .slide-in-left {
   opacity: 0;
   transform: translateX(-50px);

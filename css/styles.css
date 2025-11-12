@@ -356,6 +356,16 @@ h2 {
   box-shadow: 0 4px 15px rgba(0, 133, 132, 0.3);
 }
 
+.accordion-btn::after {
+  content: '▼';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
 .accordion-btn::before {
   content: '';
   position: absolute;
@@ -418,6 +428,10 @@ h2 {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+.accordion.active .accordion-btn::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 /* SPECIFIC STYLES FOR ACCORDION BUTTONS */
 .accordion-content .btn {
   margin-top: 20px;
@@ -460,8 +474,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: #f0f0f0;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -488,8 +502,8 @@ h2 {
 }
 
 .social-links a img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   transition: filter 0.3s ease;
 }
 
@@ -641,6 +655,7 @@ footer::before {
 @media (max-width: 850px) {
   .hero-section {
     min-height: 110vh;
+    padding-bottom: 15rem;
   }
   
   .hero-nav {
@@ -665,6 +680,7 @@ footer::before {
 @media (max-width: 768px) {
   .hero-section {
     min-height: 115vh;
+    padding-bottom: 10rem;
   }
   
   .hero-name {
@@ -710,6 +726,7 @@ footer::before {
   .hero-section {
     min-height: 120vh;
     padding-top: 2rem;
+    padding-bottom: 6rem;
   }
   
   .hero-name {
@@ -746,6 +763,7 @@ footer::before {
 @media (max-width: 480px) {
   .hero-section {
     min-height: 125vh;
+    padding-bottom: 4rem;
   }
   
   .hero-name {

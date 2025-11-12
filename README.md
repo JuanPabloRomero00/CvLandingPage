@@ -1,6 +1,6 @@
 # CV Landing Page - Portfolio Personal
 
-Página web de portfolio personal desarrollada como una landing page moderna y responsiva que presenta mi perfil profesional como desarrollador web full stack.
+Página web de portfolio personal desarrollado como una landing page moderna y responsiva que presenta mi perfil profesional como desarrollador web full stack.
 
 ## Descripción
 
@@ -12,11 +12,9 @@ Esta landing page funciona como mi CV digital interactivo, diseñada para mostra
 - **HTML5**: Estructura semántica con elementos modernos
 - **CSS3**: Estilos avanzados con variables CSS, flexbox y grid
 - **JavaScript ES6+**: Interactividad y animaciones dinámicas
-- **CSS Animations**: Efectos de transición y animaciones personalizadas
 
 ### Características Técnicas
 - **Diseño Responsive**: Adaptable a dispositivos móviles, tablets y desktop
-- **Mobile-First**: Enfoque de desarrollo que prioriza la experiencia móvil
 - **Animaciones CSS**: Efectos visuales y transiciones suaves
 - **Video Background**: Video de fondo optimizado para web
 - **Performance Optimizada**: Carga rápida y eficiente de recursos
@@ -62,6 +60,9 @@ Esta landing page funciona como mi CV digital interactivo, diseñada para mostra
 - Enlaces a redes sociales y plataformas profesionales
 
 ## Proyectos Destacados
+
+### CarwashFreaksV2.0 - Sistema de Gestión de Lavado de Autos
+Sistema completo de gestión para lavado de autos desarrollado con Node.js, Express.js y MongoDB. Incluye autenticación de usuarios, dashboard administrativo, sistema de turnos y APIs REST robustas.
 
 ### Shopping Cart - Sistema de E-commerce Full Stack
 Sistema completo de carrito de compras desarrollado con React, Node.js, Express y MongoDB. Incluye autenticación JWT, sistema de roles y dashboard administrativo.

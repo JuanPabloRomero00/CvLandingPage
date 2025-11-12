@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const typingElement = document.getElementById("typing-text");
   const phrases = [
     "Desarrollador Web Full Stack",
-    "Especialista en Stack MERN",
+    "Experiencia en Stack MERN",
     "JavaScript Developer",
-    "React & Node.js Expert"
+    "React & Node.js Developer"
   ];
   
   let phraseIndex = 0;
